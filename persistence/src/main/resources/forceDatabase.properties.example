@@ -1,0 +1,6 @@
+# For a real production deployment, you should strongly consider using one of the environment variable based
+# JPA setup strategies.
+
+# See https://sites.google.com/a/salesforce.com/java/specs/sfdc-service-binding/jpa-connection-setup?AuthEventSource=SSO
+
+url=force://vmf01.t.salesforce.com/services/Soap/u/20.0;user=<your username>;password=<your password>
