@@ -105,4 +105,5 @@ http://localhost:8080/login
 
 ## IMPORTANT NOTES
 
-If you add / remove entities, be sure to update the persistence.xml file with your updated class entries!
+* If you add / remove entities, be sure to update the persistence.xml file with your updated class entries!
+* Be careful with the properties files containing security credentials when checking into a version control system.
