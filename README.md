@@ -9,9 +9,9 @@
 
 This project is broken up into several maven modules:
 
-**parent** :
+**multimodule-parent** :
 	
-The parent project serves as the common ${artifactId} to all three submodules, and contains project global settings.
+The parent project serves as the common parent to all three submodules, and contains project global settings.
 	
 **persistence** :
 	
@@ -66,33 +66,27 @@ You should get a successful build with no errors.
 
 ## Customizing your project
 
-1) In each of the sub-modules, use Eclipse code refactor to rename the top-level packages to match your own domain name.
-
-**IMPORTANT** : Remember to select all of the options in the refactor -> rename dialog. 
-This will ensure that all metadata files get properly updated as well (such as persistence.xml and spring config files).
-	
-
-2) Set the name of the web application artifact this project will generate. Open web/pom.xml and look for the following XML snippet:
+1) Set the name of the web application artifact this project will generate. Open web/pom.xml and look for the following XML snippet:
 
 `<warName>exampleMultiModule</warName>`
 
 Change the warName property to an application name of your choosing.
 
-3) Setup your forceDatabase.properties file, in persistence/src/main/resources/
+2) Setup your forceDatabase.properties file, in persistence/src/main/resources/
 
 Instructions on setting up this file are included as comments within the file itself.
 
-4) Build your application for the first time, with your customizations. Application artifact is in web/target
+3) Build your application for the first time, with your customizations. Application artifact is in web/target
 
 mvn -DskipTests clean install
 
-5) Deploy your application to VMForce for the first time, in order to setup the oAuth authentication credentials.
+4) Deploy your application to VMForce for the first time, in order to setup the oAuth authentication credentials.
 
 See instructions [here](https://github.com/forcedotcom/vmforce/wiki) if you need help deploying an application.
 
-6) Customize the oauth.properties file in web/src/main/resources
+5) Customize the oauth.properties file in web/src/main/resources
 
-7) Now rebuild and redeploy your application, with the customized oauth credentials.
+6) Now rebuild and redeploy your application, with the customized oauth credentials.
 
 
 ## Test drive
